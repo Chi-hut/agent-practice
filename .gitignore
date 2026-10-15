@@ -1,0 +1,19 @@
+# 虚拟环境与 IDE
+.venv/
+.idea/
+__pycache__/
+*.py[cod]
+
+# Qoder 工作区生成数据
+.qoder/
+
+# 密钥与内部凭证，严禁入库
+.env
+config/全部模型解密结果.md
+request_payload.md
+
+# 含内网网关域名的生成输出（本地保留，不入库）
+agent/multimodal_matrix_result.json
+deep_agent_dump_output.md
+deep_agent_skill_dump_output.md
+multimodal_demo_output.md
