@@ -21,8 +21,9 @@ async def add_user_key_async(request: httpx.Request):
     add_user_key(request)
 
 
-http_client = httpx.Client(event_hooks={"request": [add_user_key]})
-async_http_client = httpx.AsyncClient(event_hooks={"request": [add_user_key_async]})
+# trust_env=False：内网网关必须直连，不能被系统代理（如访问 LangSmith 开的代理）接管
+http_client = httpx.Client(event_hooks={"request": [add_user_key]}, trust_env=False)
+async_http_client = httpx.AsyncClient(event_hooks={"request": [add_user_key_async]}, trust_env=False)
 
 llm = ChatOpenAI(
     model="deepseek-v4-flash-sz",

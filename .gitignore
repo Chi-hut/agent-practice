@@ -17,3 +17,8 @@ agent/multimodal_matrix_result.json
 deep_agent_dump_output.md
 deep_agent_skill_dump_output.md
 multimodal_demo_output.md
+deep_agent_http_trace*.md
+
+# file_agent 测试的运行时产物
+agent/deep_agent/file_agent/_workspace/
+agent/deep_agent/file_agent/_out/
